@@ -1,1 +1,13 @@
-<p>update-employee works!</p>
+<div class="container col-md-6">
+
+    <form (ngSubmit)="SearchEmployeeData()">
+        <div class="form-row mt-5">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Employee Id</label>
+                <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id" placeholder="Employee Id">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary my-3" routerLink="updateform">Get Employee</button>
+    </form>
+
+</div>

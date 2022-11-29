@@ -5,6 +5,7 @@ import { DeleteEmployeeComponent } from './delete-employee/delete-employee.compo
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { UpdateformComponent } from './updateform/updateform.component';
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: "addEmployee", component: AddEmployeeComponent },
   { path: "deleteEmployee", component: DeleteEmployeeComponent },
   { path: "updateEmployee", component: UpdateEmployeeComponent },
-  { path: "searchEmployee", component: SearchEmployeeComponent }
+  { path: "searchEmployee", component: SearchEmployeeComponent },
+  { path: "updateform", component: UpdateformComponent }
 
 ];
 

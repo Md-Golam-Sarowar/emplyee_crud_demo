@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 import { EmployeeServiceService } from '../employee-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
@@ -11,7 +12,7 @@ export class AddEmployeeComponent implements OnInit {
 
   employee: Employee = new Employee();
 
-  constructor(private employeeService: EmployeeServiceService) { }
+  constructor(private employeeService: EmployeeServiceService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -20,9 +21,14 @@ export class AddEmployeeComponent implements OnInit {
   addEmployeeData() {
     this.employeeService.addEmployee(this.employee).subscribe(data => {
       alert("Employee Data Saved Successfully!!!");
+      this.redirectToemployeeList();
     }, error => alert("unable to insert data!!")
 
     )
+  }
+
+  redirectToemployeeList() {
+    this.router.navigate(["/employees"]);
   }
 
 }

@@ -10,6 +10,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
+import { UpdateformComponent } from './updateform/updateform.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchEmployeeComponent } from './search-employee/search-employee.compo
     AddEmployeeComponent,
     DeleteEmployeeComponent,
     UpdateEmployeeComponent,
-    SearchEmployeeComponent
+    SearchEmployeeComponent,
+    UpdateformComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,6 @@ import { SearchEmployeeComponent } from './search-employee/search-employee.compo
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
