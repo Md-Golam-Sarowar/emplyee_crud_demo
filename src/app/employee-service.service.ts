@@ -27,8 +27,14 @@ export class EmployeeServiceService {
     return this.httpClient.get<Employee[]>(this.getUrl);
   }
 
-  updateEmployee(id: number) {
+  getEmployeeById(id: number) {
     return this.httpClient.get<any>(this.updateUrl + "/" + id);
+  }
+
+  updateEmployee(employee: Employee, id: number) {
+
+    return this.httpClient.put<any>(this.updateUrl + "/" + id, employee);
+
   }
 
 }
